@@ -1,14 +1,16 @@
 import React from "react";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>TESTING TESTING</h1>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>TESTING TESTING</h1>
+        </header>
+      </div>
+    );
+  }
+};
 
 export default App;
