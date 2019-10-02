@@ -28,6 +28,7 @@ describe("Application", () => {
   //    --> "render" = imported by react-testing-library
   //    --> "expect" = available in global scope provided by JEST
   //    --> "getByText" query = return by "render" (but queries come from the dom-testing-library)
+  //          - react-testing-library renders components onto document.body, this query selects components by text
   //    --> "toBeInTheDocument" function = matcher provided by JEST-DOM (not provided by default --> configured JEST to use JEST-DOM in global setup file)
   it("renders the message on page load", () => {
     const { getByText } = render(<App />);
