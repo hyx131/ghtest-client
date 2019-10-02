@@ -1,23 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Input = () => {
-  const [text, setText] = useState("");
-
-  const handleChange = e => {
-    setText(e.target.value);
-  };
-
-  const handleClick = e => {
-    e.preventDefault();
-    console.log(text);
-    setText("");
-  };
-
+const Input = props => {
   return (
     <form>
-      <input type="text" value={text} onChange={handleChange} />
+      <input type="text" value={props.value} onChange={props.handleChange} />
       <br />
-      <button type="submit" onClick={handleClick}>
+      <button type="submit" onClick={props.handleClick}>
         Display Input
       </button>
     </form>
