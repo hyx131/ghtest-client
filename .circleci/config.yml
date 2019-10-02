@@ -35,3 +35,34 @@ jobs:
 
       # run tests!
       - run: npm test
+
+  deploy:
+    machine:
+      enabled: true
+
+    working_directory: ~/ghtest-client
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "73:fb:0f:6b:2a:79:a1:62:10:70:a4:49:00:ba:dd:dd"
+      - checkout
+      - run:
+          name: Push Master to Production
+          command: |
+            git push https://github.com/ghtest-client.git master:production
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: production
+      - deploy:
+          filters:
+            branches:
+              ignore: production
+          requires:
+            - build
