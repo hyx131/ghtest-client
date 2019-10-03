@@ -16,7 +16,7 @@ const App = () => {
     e.preventDefault();
     setDisplay(text);
     setText("");
-    setClick("Ouch, got clicked!");
+    setClick("Ouch, got clicked T_T");
   };
 
   const inputClick = () => {
