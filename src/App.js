@@ -52,7 +52,7 @@ const App = () => {
           <br />
           {showReducerState.show ? (
             <p>
-              <em>TRUE: you have indeed clicked the button...</em>
+              <em>TRUE: you have indeed pressed the button...</em>
             </p>
           ) : null}
         </header>

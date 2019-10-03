@@ -23,7 +23,7 @@ describe("Input Field", () => {
   // tests the change of props in <Input/> component when button being clicked
   //    --> verifies the prop 'click' to change from "Click Me!" to "Ouch, got clicked T_T" after "Display Input" was clicked
   //    --> the props were being passed to <Input/> , but the actual change occurs in 'App.js', thus need to render <App/> along with <Input/>
-  //    --> "(click/i)" = regex expression --> returns the first node that contains the term 'click'
+  //    --> "(click/i)" = regex expression --> returns the node that contains the term 'click'
   //    --> "fireEvent" = helper method provided by react-testing-library to capture events being dispatched on an element
   it("props changes after button clicked", () => {
     const { getByText } = render(
