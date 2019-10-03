@@ -50,11 +50,13 @@ const App = () => {
             handleClick={handleClick}
           />
           <br />
-          {showReducerState.show ? (
-            <p>
+          <div>
+            {showReducerState.show ? (
               <em>TRUE: you have indeed pressed the button...</em>
-            </p>
-          ) : null}
+            ) : (
+              <em>FALSE: you have not yet pressed the button...</em>
+            )}
+          </div>
         </header>
       </div>
     </>
